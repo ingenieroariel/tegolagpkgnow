@@ -1,9 +1,9 @@
-FROM scratch
-MAINTAINER terranodo
-WORKDIR /
+FROM debian
 
-COPY tegola /
-COPY athens-osm-20170921.gpkg /
-COPY config.toml /
+ADD tegola /
+ADD config.toml /
+ADD athens-osm-20170921.gpkg /
 
-RUN "chmod +x /tegola"
+ENTRYPOINT ["./tegola"]
+EXPOSE 8080
+
