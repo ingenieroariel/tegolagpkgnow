@@ -7,25 +7,29 @@ hostname = "localhost"
 [[providers]]
 name = "gpkgathens"
 type = "gpkg"
-FilePath = "/athens-osm-20170921.gpkg"
+filepath = "athens-osm-20170921.gpkg"
 
     [[providers.layers]]
     name = "land_polygons"
+    tablename = "land_polygons"
     geometry_fieldname = "geom"
     id_fieldname = "fid"
 
     [[providers.layers]]
-	name = "roads_lines"
+    name = "roads_lines"
+    tablename = "roads_lines"
     geometry_fieldname = "geom"
     id_fieldname = "fid"
 
     [[providers.layers]]
     name = "places_points"
+    tablename = "places_points"
     geometry_fieldname = "geom"
     id_fieldname = "fid"
 
     [[providers.layers]]
     name = "buildings_polygons"
+    tablename = "buildings_polygons"
     geometry_fieldname = "geom"
     id_fieldname = "fid"
 
